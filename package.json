@@ -1,0 +1,36 @@
+{
+  "name": "metricsephemeral",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./tests/**/**/*.* --timeout 5000 --exit",
+    "coverage": "nyc --reporter=html --report-dir \"./testResults/output/istanbul\" mocha --recursive ./tests/**/**/*.* --timeout 5000 --exit"
+  },
+  "nyc": {
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
+  "engines": {
+    "node": "12.18.3"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "stack-trace": "0.0.10"
+  },
+  "devDependencies": {
+    "axios": "^0.21.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "14.0.0"
+  }
+}
