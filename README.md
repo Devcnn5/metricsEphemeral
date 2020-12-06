@@ -20,3 +20,5 @@ The application has following api's available:
   3. GET `/metric/:key/sum` : This api takes input as a path parameter in the `key` variable which will be the metric. This api returns the sum of all the valid values of the           metric present in the application.
   4. GET `/metric/:key/avg` : This api takes input as a path parameter in the `key` variable which will be the metric. This api returns the average of all the valid values of the     metric present in the application.
   5. GET `/metric/:key/getValuesOfMetric`: This api takes input as a path parameter in the `key` variable which will be the metric. This api returns all the valid values along           with their timestamp of entry of the metric present in the application.
+# Routes
+1. A middleware setup on the route `/metric/:key` cleans the storage before logging or reporting metrics.
